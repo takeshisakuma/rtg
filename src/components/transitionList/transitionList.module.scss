@@ -10,99 +10,214 @@ html {
   overflow-y: scroll;
 }
 
-.wrapper {
-  margin: 0 auto;
-  width: 600px;
-}
+@media screen and (min-width: 651px) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
 
-.cardGroup {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  width: 1000px;
-}
+  .controller {
+    background-color: #ffebee;
+    border-radius: 4px;
+    display: flex;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px;
+  }
 
-.controller {
-  background-color: #ffebee;
-  border-radius: 4px;
-  display: flex;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
-  justify-content: space-between;
-  margin-top: 40px;
-  padding: 20px;
-}
+  .controllerAddGroup {
+    display: flex;
+  }
 
-.controllerAddGroup {
-  display: flex;
-}
+  .controllerInput {
+    border: none;
+    padding: 10px;
+    background-color: #ffcdd2;
+    transition: all 0.5s ease;
 
-.controllerInput {
-  border: none;
-  padding: 10px;
-  background-color: #ffcdd2;
-  transition: all 0.5s ease;
+    &:focus {
+      background-color: #ffffff;
+      outline: none;
+    }
+  }
 
-  &:focus {
-    background-color: #ffffff;
+  .button {
+    appearance: none;
+    background-color: #ec407a;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    margin: 0;
     outline: none;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+    width: 100px;
+
+    &:hover {
+      background-color: #ad1457;
+    }
+
+    &:disabled {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+
+  .cardGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    max-width: 1000px;
+  }
+
+  .cardInner {
+    width: 100%;
+  }
+
+  .cardShape {
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    display: flex;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 600px;
+
+    & + .cardShape {
+      margin-top: 20px;
+    }
+  }
+
+  .cardWord {
+    color: #212121;
+    display: inline;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    overflow: hidden;
+    padding: 0 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px;
+  }
+
+  .cardTransition {
+    background-color: #1e88e5;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
   }
 }
 
-.button {
-  appearance: none;
-  background-color: #ec407a;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1rem;
-  margin: 0;
-  outline: none;
-  padding: 10px 20px;
-  transition: all 0.5s ease;
-  width: 100px;
-
-  &:hover {
-    background-color: #ad1457;
+@media screen and (max-width: 650px) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 10px;
   }
 
-  &:disabled {
-    opacity: 0;
-    cursor: default;
-  }
-}
-
-.cardShape {
-  background-color: #e3f2fd;
-  border-radius: 4px;
-  display: flex;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
-  justify-content: space-between;
-  padding: 20px;
-  width: 600px;
-
-  & + .cardShape {
+  .controller {
+    background-color: #ffebee;
+    border-radius: 4px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
     margin-top: 20px;
+    padding: 15px;
+
+    & > .button {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 10px;
+    }
   }
-}
 
-.cardWord {
-  color: #212121;
-  display: inline;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.2;
-  overflow: hidden;
-  padding: 0 20px;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 400px;
-}
+  .controllerAddGroup {
+    display: flex;
+  }
 
-.cardTransition {
-  background-color: #1e88e5;
-  color: #ffffff;
-  border-radius: 4px;
-  padding: 10px;
+  .controllerInput {
+    border: none;
+    padding: 10px;
+    background-color: #ffcdd2;
+    transition: all 0.5s ease;
+
+    &:focus {
+      background-color: #ffffff;
+      outline: none;
+    }
+  }
+
+  .button {
+    appearance: none;
+    background-color: #ec407a;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.5rem;
+    margin: 0;
+    outline: none;
+    padding: 0px 5px;
+    transition: all 0.5s ease;
+    width: 100px;
+
+    &:hover {
+      background-color: #ad1457;
+    }
+
+    &:disabled {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+
+  .cardGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 1000px;
+  }
+
+  .cardInner {
+    width: 100%;
+  }
+
+  .cardShape {
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    display: flex;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 600px;
+
+    & + .cardShape {
+      margin-top: 10px;
+    }
+  }
+
+  .cardWord {
+    color: #212121;
+    display: inline;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    overflow: hidden;
+    padding: 0 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px;
+  }
+
+  .cardTransition {
+    background-color: #1e88e5;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 5px;
+  }
 }

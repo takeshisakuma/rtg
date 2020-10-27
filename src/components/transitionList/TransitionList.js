@@ -113,7 +113,7 @@ const TransitionList = () => {
 
       <div className={Style.cardGroup}>
 
-        <TransitionGroup>
+        <TransitionGroup className={Style.cardInner}>
 
           {items.map(({id,word})=>(
 
