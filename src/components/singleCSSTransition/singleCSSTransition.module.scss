@@ -1,0 +1,89 @@
+.circleGroup {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+  width: 1000px;
+}
+
+.circleMember {
+  text-align: center;
+  width: 100px;
+}
+
+.circleShape {
+  align-items: center;
+  background-color: red;
+  border-radius: 50px;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+}
+
+.circleText {
+  color: white;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+}
+
+//apperaの最初のフレーム瞬間の状態
+.testAppear {
+  transition: all 1s ease;
+  border-radius: 10px;
+  transform: rotateZ(30deg) scale(2);
+  opacity: 0;
+}
+
+//.testAppearの直後の状態
+.testAppearActive {
+}
+
+//appearの最終フレームの状態
+.testAppearDone {
+  transition: all 1s ease;
+  border-radius: 50px;
+  opacity: 1;
+}
+
+//enter中の最初のフレーム瞬間の状態
+.testEnter {
+  transition: all 1s ease;
+  transform: translateY(0);
+  background-color: red;
+}
+//enter中の最終フレームの状態
+.testEnterActive {
+  transition: all 1s ease;
+  transform: translateY(220px);
+  background-color: red;
+}
+
+//enter完了の状態
+.testEnterDone {
+  transition: all 1s ease;
+  transform: translateY(220px);
+  background-color: green;
+}
+
+//exitの初期状態
+.testExit {
+  transition: all 1s ease;
+  transform: translateY(220px);
+  background-color: green;
+}
+
+//exit中の最終フレームの状態
+.testExitActive {
+  transition: all 1s ease;
+  transform: translateY(0);
+  background-color: blue;
+}
+//exit完了
+.testExitDone {
+  transition: all 1s ease;
+  transform: translateY(0);
+  background-color: gray;
+}
